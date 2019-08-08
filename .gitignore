@@ -31,5 +31,7 @@
 *.out
 *.app
 
+lox
+
 # Vim files
 Session.vim

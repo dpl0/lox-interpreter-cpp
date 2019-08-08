@@ -3,8 +3,19 @@
 
 #include <string>
 
-void runFile(std::string filename);
-void run(std::ifstream filestream);
-void prompt();
+class Lox {
+    bool hadError = false;
+public:
+    void runFile(std::string filename);
+    void prompt();
+
+    void error(int line, std::string msg);
+
+private:
+    void run(std::string source);
+
+    void report(int line, std::string where, std::string msg);
+};
+
 
 #endif /* _LOX_LOX_ */
